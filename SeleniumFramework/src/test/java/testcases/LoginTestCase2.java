@@ -30,7 +30,7 @@ public class LoginTestCase2 extends BaseClass
 		
 		login.verifyTitleAfterLogin();
 		
-		logger.log(LogStatus.PASS, "Title Verified");
+		logger.log(LogStatus.PASS, "Title Verified"); 
 		
 	}
 	
