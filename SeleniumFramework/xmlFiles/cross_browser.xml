@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests" thread-count="3">
+	<test name="IETestSuite">
+
+		<parameter name="Browser" value="IE" />
+		<parameter name="URL" value="https://www.gmail.com/" />
+
+		<classes>
+			<class name="class13.CrossBrowserTesting" />
+		</classes>
+	</test>
+
+	<test name="ChromeTestSuite">
+
+		<parameter name="Browser" value="Chrome" />
+		<parameter name="URL" value="https://www.facebook.com/" />
+
+		<classes>
+			<class name="class13.CrossBrowserTesting" />
+		</classes>
+	</test>
+
+	<test name="FirefoxTestSuite">
+
+		<parameter name="Browser" value="Firefox" />
+		<parameter name="URL" value="https://www.google.com/" />
+
+		<classes>
+			<class name="class13.CrossBrowserTesting" />
+		</classes>
+	</test>
+
+
+</suite> 
