@@ -73,7 +73,7 @@
 						<suiteXmlFile>./xmlFiles/login.xml</suiteXmlFile>
 					</suiteXmlFiles>
 
-					<systemPropertyVariables>
+			<!-- 		<systemPropertyVariables>
 
 						<crm.url>${url}</crm.url>
 						<crm.browser>${Browser}</crm.browser>
@@ -81,7 +81,7 @@
 						<crm.pass>${pass}</crm.pass>
 
 
-					</systemPropertyVariables>
+					</systemPropertyVariables> -->
 
 				</configuration>
 			</plugin>
