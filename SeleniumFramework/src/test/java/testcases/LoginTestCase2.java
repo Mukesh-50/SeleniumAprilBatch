@@ -1,6 +1,7 @@
 package testcases;
 
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.relevantcodes.extentreports.LogStatus;
@@ -15,8 +16,9 @@ public class LoginTestCase2 extends BaseClass
 	LoginPage login;
 	LogoutPage logout;
 	
+	@Parameters({"uname","pass"})
 	@Test
-	public void login()
+	public void login(String uname,String pass)
 	{
 		logger=report.startTest("Login", "This test case will verify valid login");
 		
@@ -26,7 +28,7 @@ public class LoginTestCase2 extends BaseClass
 		
 		logger.log(LogStatus.INFO, "Login page appeared");
 	
-		login.loginToCRM();
+		login.loginToCRM(uname,pass);
 		
 		login.verifyTitleAfterLogin();
 		

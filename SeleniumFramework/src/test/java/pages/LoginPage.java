@@ -26,11 +26,19 @@ public class LoginPage {
 	@FindBy(xpath = "//*[@value='LOGIN']")
 	WebElement loginButton;
 
-	public void loginToCRM() 
+	/*public void loginToCRM() 
 	{
 		
 		Utility.waitForWebElement(driver, username, 20).sendKeys(DataProviderFactory.getExcel().getData(0, 0, 0));
 		Utility.waitForWebElement(driver, password, 20).sendKeys(DataProviderFactory.getExcel().getData(0, 0, 1));
+		Utility.waitForWebElement(driver, loginButton, 20).click();
+	}*/
+	
+	public void loginToCRM(String uname,String pass) 
+	{
+		
+		Utility.waitForWebElement(driver, username, 20).sendKeys(uname);
+		Utility.waitForWebElement(driver, password, 20).sendKeys(pass);
 		Utility.waitForWebElement(driver, loginButton, 20).click();
 	}
 

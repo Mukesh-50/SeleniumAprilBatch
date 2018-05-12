@@ -7,6 +7,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
 
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
@@ -32,12 +33,19 @@ public class BaseClass
 			
 	}
 	
-	@BeforeClass
+/*	@BeforeClass
 	public void startTest()
 	{
 		driver=BrowserFactory.getBrowser(DataProviderFactory.getConfig().getBrowser(),DataProviderFactory.getConfig().getTestURL());
 	}
+	*/
 	
+	@Parameters({"Browser","url"})
+	@BeforeClass
+	public void startTest(String browser,String url)
+	{
+		driver=BrowserFactory.getBrowser(browser,url);
+	}
 	
 	@AfterClass
 	public void endTest()
