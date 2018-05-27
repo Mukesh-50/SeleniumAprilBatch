@@ -1,6 +1,5 @@
 package pages;
 
-import org.apache.poi.ss.formula.udf.UDFFinder;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -40,9 +39,7 @@ public class ContactPage {
 	
 	@FindBy(xpath="//input[contains(@value,'Save')]") WebElement saveButton;
 		
-	String xpath="//*[contains(text(),'"+usernameValidation+"')]";
 
-	By validateUser=By.xpath(xpath);
 	
 	
 	public void navigateToContactPage()
@@ -75,7 +72,9 @@ public class ContactPage {
 	
 	public void validateContactAdded(String userAdded)
 	{
-		usernameValidation=userAdded;
+		String xpath="//*[contains(text(),'"+usernameValidation+"')]";
+
+		By validateUser=By.xpath(xpath);
 		
 		WebDriverWait wait=new WebDriverWait(driver, 10);
 		
