@@ -50,7 +50,7 @@ public class BaseClass
 	@AfterClass
 	public void endTest()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 	
 	@AfterMethod
