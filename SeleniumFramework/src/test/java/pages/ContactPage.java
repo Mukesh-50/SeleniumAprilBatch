@@ -58,7 +58,7 @@ public class ContactPage {
 		
 		type.selectByIndex(0);
 		
-		empName.sendKeys("Robert Craig");
+		empName.sendKeys("Abhishekk J Pinaki");
 		
 		username.sendKeys(unameForContact);
 		

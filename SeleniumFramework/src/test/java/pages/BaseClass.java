@@ -50,6 +50,7 @@ public class BaseClass
 	@AfterClass
 	public void endTest()
 	{
+		System.out.println("");
 		//driver.quit();
 	}
 	
