@@ -35,11 +35,11 @@ public class AddContacts extends BaseClass{
 	
 	logger.log(LogStatus.INFO, "landed to contact page");
 	
-	contact.addContact("Kabir5009", "Kabir5009");
+	contact.addContact("Kabir50010", "Kabir50010");
 	
 	logger.log(LogStatus.INFO, "Contact added");
 	
-	contact.validateContactAdded("Kabir5009");
+	contact.validateContactAdded("Kabir50010");
 	
 	logger.log(LogStatus.PASS, "user validated");
 	
