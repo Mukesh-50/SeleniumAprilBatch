@@ -39,7 +39,7 @@ public class AddContacts extends BaseClass{
 	
 	logger.log(LogStatus.INFO, "Contact added");
 	
-	contact.validateContactAdded();
+	contact.validateContactAdded("Kabir5009");
 	
 	logger.log(LogStatus.PASS, "user validated");
 	

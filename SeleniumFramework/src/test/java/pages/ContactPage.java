@@ -1,5 +1,6 @@
 package pages;
 
+import org.apache.poi.ss.formula.udf.UDFFinder;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -72,8 +73,9 @@ public class ContactPage {
 	
 	}
 	
-	public void validateContactAdded()
+	public void validateContactAdded(String userAdded)
 	{
+		usernameValidation=userAdded;
 		
 		WebDriverWait wait=new WebDriverWait(driver, 10);
 		
