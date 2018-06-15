@@ -17,6 +17,13 @@
   </dependency>
   
   <dependency>
+    <groupId>com.relevantcodes</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>2.41.2</version>
+</dependency>
+             
+  
+  <dependency>
     <groupId>org.apache.poi</groupId>
     <artifactId>poi</artifactId>
     <version>3.15</version>
@@ -53,8 +60,7 @@
 			<configuration>
 
 				<suiteXmlFiles>
-					<suiteXmlFile>./test1.xml</suiteXmlFile>
-					<suiteXmlFile>./test2.xml</suiteXmlFile>
+					<suiteXmlFile>./xmlfiles/login.xml</suiteXmlFile>
 				</suiteXmlFiles>
 
 			</configuration>

@@ -48,7 +48,7 @@ public class BrowserFactory {
 	
 		driver.get(appurl);
 		
-		System.out.println(driver.getTitle());
+		System.out.println("Title is" + driver.getTitle());
 		
 		return driver;
 	}
@@ -56,8 +56,8 @@ public class BrowserFactory {
 	public static void closeBrowser(WebDriver driver)
 	{
 		
-		driver.close();
-
+		driver.quit();
+        System.out.println("Browser closed");
 	}
 
 }

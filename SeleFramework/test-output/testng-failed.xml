@@ -3,11 +3,17 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="class13.DatadrivenFramework3">
+      <class name="Testcases.LoginLogoutTC">
         <methods>
-          <include name="loginOrangeHRM"/>
+          <include name="endTest"/>
+          <include name="tearDownTestSuite"/>
+          <include name="login"/>
+          <include name="logout"/>
+          <include name="startTest"/>
+          <include name="endLogger"/>
+          <include name="startTestSuite"/>
         </methods>
-      </class> <!-- class13.DatadrivenFramework3 -->
+      </class> <!-- Testcases.LoginLogoutTC -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
