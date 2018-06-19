@@ -25,12 +25,19 @@ public class LoginPage {
 	
 	@FindBy(xpath="//*[@name='Submit']") WebElement loginbutton;
 	
-	public void logintoCRM()
+/*	public void logintoCRM()
 	{
 		Utility.waitforWebElement(driver, Username, 30).sendKeys(DataproviderFactory.getExcel().getData(0,0,0));
 		Utility.waitforWebElement(driver, Password, 30).sendKeys(DataproviderFactory.getExcel().getData(0,0,1));
 		loginbutton.click();
-	}
+	} */
+	
+	public void logintoCRM(String uname, String pass)
+	{
+		Utility.waitforWebElement(driver, Username, 30).sendKeys(uname);
+		Utility.waitforWebElement(driver, Password, 30).sendKeys(pass);
+		loginbutton.click();
+	} 
 	
 	public void titleBeforeLogin()
 	{

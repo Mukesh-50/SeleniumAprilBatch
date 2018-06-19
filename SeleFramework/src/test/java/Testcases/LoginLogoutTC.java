@@ -1,6 +1,7 @@
 package Testcases;
 
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.relevantcodes.extentreports.ExtentTest;
@@ -15,9 +16,9 @@ import pages.LogoutPage;
 	    LoginPage login;
 	    LogoutPage logout;
 	   
-				
+		@Parameters({"uname","pass"})	
 		@Test
-		public void login()
+		public void login(String uname,String pass)
 		{
 			logger = report.startTest("login", "This Test is to verify to login");
 			
@@ -27,7 +28,7 @@ import pages.LogoutPage;
 			
 			logger.log(LogStatus.INFO, "Login Page appeared");
 			
-			login.logintoCRM();
+			login.logintoCRM(uname,pass);
 			
 			login.titleAfterLogin();
 			

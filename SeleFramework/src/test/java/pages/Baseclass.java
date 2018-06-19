@@ -7,6 +7,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
 
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
@@ -30,10 +31,17 @@ public class Baseclass {
 	 report = new ExtentReports(System.getProperty("user.dir") + "/Reports/"+ Utility.getCurrentDateTime() +".html");
 	}
 	
-	@BeforeClass
+/*	@BeforeClass
 	public void startTest()
 	{
       driver = BrowserFactory.getBrowser(DataproviderFactory.getConfig().getBrowser(), DataproviderFactory.getConfig().getTestURL());
+	} */
+	
+	@Parameters({"browser","url"})
+	@BeforeClass
+	public void startTest(String browser, String url)
+	{
+      driver = BrowserFactory.getBrowser(browser,url);
 	}
 	
 	@AfterClass
