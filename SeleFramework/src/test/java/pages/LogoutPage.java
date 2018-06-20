@@ -1,9 +1,14 @@
 package pages;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import lib.Utility;
+
 public class LogoutPage {
+	
+	WebDriver driver;
 	
 	@FindBy (id = "welcome") WebElement WelcomeAdmin;
 	@FindBy (xpath = "//a[text()='Logout']") WebElement Logout;
@@ -11,15 +16,9 @@ public class LogoutPage {
 	public void LogoutfromApplication()
 	{
 		
-		WelcomeAdmin.click();
+		Utility.waitforWebElement(driver, WelcomeAdmin, 20).click();
 		
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			
-		}
-		
-		Logout.click();
+		Utility.waitforWebElement(driver, Logout, 20).click();
 		
 	}
 	
