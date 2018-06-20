@@ -10,6 +10,11 @@ public class LogoutPage {
 	
 	WebDriver driver;
 	
+	public LogoutPage(WebDriver ldriver)
+	{
+		this.driver = ldriver;
+	}
+	
 	@FindBy (id = "welcome") WebElement WelcomeAdmin;
 	@FindBy (xpath = "//a[text()='Logout']") WebElement Logout;
 	
