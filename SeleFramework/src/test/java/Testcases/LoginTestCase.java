@@ -19,7 +19,7 @@ public class LoginTestCase extends Baseclass {
 		
 		Utility.waitforTitle(driver, "OrangeHRM", 30);
 		
-		login.logintoCRM();
+		login.logintoCRM("","");
 		
 		Utility.waitforURLContains(driver,"dashboard", 30);
 				
